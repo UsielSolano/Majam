@@ -1,0 +1,250 @@
+
+.home {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-muted);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero__eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.hero__title {
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  margin-bottom: 2rem;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  color: var(--color-muted);
+  max-width: 500px;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.hero__cta {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--color-text);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.3s ease;
+}
+
+.hero__cta:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+/* ---------- INTRO ---------- */
+.intro {
+  padding: 6rem 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.intro__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro__text {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--color-text);
+}
+
+/* ---------- SERVICIOS ---------- */
+.services {
+  padding: 6rem 2rem;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.services__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 3rem;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service__number {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  letter-spacing: 0.15em;
+}
+
+.service__title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.service__desc {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ---------- PROYECTOS PREVIEW ---------- */
+.projects-preview {
+  padding: 6rem 2rem;
+}
+
+.projects-preview__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-preview__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2.5rem;
+}
+
+.projects-preview__link {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  transition: color 0.3s ease;
+}
+
+.projects-preview__link:hover {
+  color: var(--color-text);
+}
+
+.projects-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  cursor: pointer;
+}
+
+.project-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: #d9d1c4;
+  background-image: linear-gradient(135deg, #d9d1c4 0%, #b8a98e 100%);
+  margin-bottom: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-card__image {
+  opacity: 0.85;
+}
+
+.project-card__name {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.project-card__meta {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ---------- CTA FINAL ---------- */
+.cta {
+  padding: 8rem 2rem;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  text-align: center;
+}
+
+.cta__container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.cta__text {
+  font-size: 1.1rem;
+  color: rgba(245, 241, 234, 0.7);
+  margin-bottom: 3rem;
+}
+
+.cta__button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--color-bg);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.3s ease;
+}
+
+.cta__button:hover {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 2rem 1.5rem;
+  }
+
+  .intro,
+  .services,
+  .projects-preview,
+  .cta {
+    padding: 4rem 1.5rem;
+  }
+
+  .projects-preview__header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
