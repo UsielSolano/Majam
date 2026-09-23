@@ -13,11 +13,26 @@
   font-size: 0.85rem;
   color: var(--color-muted);
 }
+/* ---------- RESPONSIVE FOOTER ---------- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .footer__container {
+    font-size: 0.8rem;
+  }
+}
 
 @media (max-width: 600px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
   .footer__container {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+    font-size: 0.75rem;
   }
 }

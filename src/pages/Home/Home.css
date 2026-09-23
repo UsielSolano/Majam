@@ -229,22 +229,153 @@
 }
 
 /* ---------- RESPONSIVE ---------- */
+/* ---------- RESPONSIVE HOME ---------- */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 75vh;
+    padding: 3rem 1.75rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .intro,
+  .services,
+  .projects-preview {
+    padding: 5rem 1.75rem;
+  }
+
+  .cta {
+    padding: 6rem 1.75rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
-    min-height: 70vh;
-    padding: 2rem 1.5rem;
+    min-height: 65vh;
+    padding: 2.5rem 1.25rem;
+  }
+
+  .hero__eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+  }
+
+  .hero__title {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero__cta {
+    padding: 0.85rem 2rem;
+    font-size: 0.75rem;
+  }
+
+  .intro,
+  .services,
+  .projects-preview {
+    padding: 4rem 1.25rem;
+  }
+
+  .intro__text {
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .projects-preview__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .projects-preview__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card__image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .cta {
+    padding: 5rem 1.25rem;
+  }
+
+  .cta__title {
+    margin-bottom: 1rem;
+  }
+
+  .cta__text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta__button {
+    padding: 0.9rem 2rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+    padding: 2rem 1rem;
+  }
+
+  .hero__title {
+    letter-spacing: -0.03em;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
   }
 
   .intro,
   .services,
   .projects-preview,
   .cta {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1rem;
   }
 
-  .projects-preview__header {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
+  .section-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.75rem;
+  }
+
+  .intro__text {
+    font-size: 1.05rem;
+  }
+
+  .service__title {
+    font-size: 1.05rem;
+  }
+
+  .service__desc {
+    font-size: 0.9rem;
+  }
+
+  .project-card__name {
+    font-size: 0.95rem;
+  }
+
+  .cta__title {
+    font-size: 1.75rem;
+  }
+
+  .cta__button {
+    padding: 0.85rem 1.75rem;
+    font-size: 0.7rem;
   }
 }

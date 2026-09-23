@@ -29,3 +29,20 @@ main {
   min-height: calc(100vh - 140px);
   padding-top: 80px;
 }
+/* ---------- RESPONSIVE GLOBAL ---------- */
+@media (max-width: 768px) {
+  main {
+    padding-top: 70px;
+    min-height: calc(100vh - 120px);
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 60px;
+  }
+
+  html, body {
+    font-size: 15px;
+  }
+}
