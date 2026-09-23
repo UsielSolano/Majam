@@ -1,7 +1,8 @@
 .footer {
   padding: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid var(--color-border);
   background-color: var(--color-bg);
+  transition: var(--transition-theme);
 }
 
 .footer__container {
@@ -13,7 +14,7 @@
   font-size: 0.85rem;
   color: var(--color-muted);
 }
-/* ---------- RESPONSIVE FOOTER ---------- */
+
 @media (max-width: 768px) {
   .footer {
     padding: 1.75rem 1.25rem;

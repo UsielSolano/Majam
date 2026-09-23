@@ -1,11 +1,47 @@
+/* =========================
+   TEMA CLARO (default)
+   ========================= */
 :root {
   --color-bg: #f5f1ea;
+  --color-bg-alt: rgba(0, 0, 0, 0.02);
+  --color-bg-elevated: #eae5db;
   --color-text: #1a1a1a;
+  --color-text-inverse: #f5f1ea;
   --color-accent: #8b6f47;
   --color-muted: #6b6b6b;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-strong: rgba(0, 0, 0, 0.15);
+
+  --color-placeholder-1: #d9d1c4;
+  --color-placeholder-2: #8b6f47;
+
   --font-primary: 'Helvetica Neue', Arial, sans-serif;
+
+  --transition-theme: background-color 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease;
 }
 
+/* =========================
+   TEMA OSCURO
+   ========================= */
+[data-theme='dark'] {
+  --color-bg: #14110d;
+  --color-bg-alt: rgba(255, 255, 255, 0.03);
+  --color-bg-elevated: #1d1a15;
+  --color-text: #ede7db;
+  --color-text-inverse: #14110d;
+  --color-accent: #c9a06a;
+  --color-muted: #9c958a;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.18);
+
+  --color-placeholder-1: #2a2520;
+  --color-placeholder-2: #5a4833;
+}
+
+/* =========================
+   RESET Y BASE
+   ========================= */
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +54,7 @@ html, body {
   font-family: var(--font-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: var(--transition-theme);
 }
 
 a {
@@ -29,7 +66,20 @@ main {
   min-height: calc(100vh - 140px);
   padding-top: 80px;
 }
-/* ---------- RESPONSIVE GLOBAL ---------- */
+
+/* Transición suave global solo en contenedores grandes */
+body,
+.navbar,
+.footer,
+main,
+section {
+  transition: background-color 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* =========================
+   RESPONSIVE GLOBAL
+   ========================= */
 @media (max-width: 768px) {
   main {
     padding-top: 70px;

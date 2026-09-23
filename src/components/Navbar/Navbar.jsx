@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
+import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import './Navbar.css'
 
 function Navbar() {
@@ -41,17 +42,21 @@ function Navbar() {
           </NavLink>
         </nav>
 
-        {/* BOTÓN HAMBURGUESA */}
-        <button
-          className={`navbar__toggle ${isOpen ? 'is-open' : ''}`}
-          onClick={toggleMenu}
-          aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
-          aria-expanded={isOpen}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        {/* ACCIONES: toggle de tema + hamburguesa */}
+        <div className="navbar__actions">
+          <ThemeToggle />
+
+          <button
+            className={`navbar__toggle ${isOpen ? 'is-open' : ''}`}
+            onClick={toggleMenu}
+            aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+            aria-expanded={isOpen}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
 
       {/* OVERLAY */}

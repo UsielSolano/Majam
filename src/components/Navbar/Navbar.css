@@ -7,11 +7,12 @@
   left: 0;
   width: 100%;
   height: 80px;
-  background-color: rgba(245, 241, 234, 0.95);
+  background-color: color-mix(in srgb, var(--color-bg) 95%, transparent);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 100;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--color-border);
+  transition: var(--transition-theme);
 }
 
 .navbar__container {
@@ -22,6 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .navbar__logo {
@@ -39,6 +41,7 @@
 .navbar__nav--desktop {
   display: flex;
   gap: 2.5rem;
+  margin-left: auto;
 }
 
 .navbar__link {
@@ -66,6 +69,17 @@
 }
 
 /* =========================
+   ACCIONES (toggle tema + hamburguesa)
+   ========================= */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 102;
+  position: relative;
+}
+
+/* =========================
    BOTÓN HAMBURGUESA
    ========================= */
 .navbar__toggle {
@@ -77,7 +91,6 @@
   background: transparent;
   cursor: pointer;
   position: relative;
-  z-index: 102;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -112,7 +125,7 @@
   display: none;
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s ease;
@@ -141,7 +154,7 @@
   transform: translateX(100%);
   transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
   z-index: 101;
-  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.08);
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
 }
 
 .navbar__mobile.is-open {
@@ -152,8 +165,21 @@
   font-size: 1.1rem;
   letter-spacing: 0.08em;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--color-border);
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, padding-left 0.3s ease;
 }
+
+.navbar__mobile.is-open .navbar__link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.navbar__mobile.is-open .navbar__link:nth-child(1) { transition-delay: 0.1s; }
+.navbar__mobile.is-open .navbar__link:nth-child(2) { transition-delay: 0.18s; }
+.navbar__mobile.is-open .navbar__link:nth-child(3) { transition-delay: 0.26s; }
+.navbar__mobile.is-open .navbar__link:nth-child(4) { transition-delay: 0.34s; }
 
 .navbar__mobile .navbar__link.active::after {
   display: none;
@@ -163,7 +189,6 @@
   color: var(--color-accent);
   padding-left: 0.75rem;
   border-left: 2px solid var(--color-accent);
-  transition: padding-left 0.3s ease;
 }
 
 /* =========================
