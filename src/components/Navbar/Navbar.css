@@ -101,7 +101,7 @@
   display: block;
   width: 26px;
   height: 1.5px;
-  background-color: var(--color-text);
+  background-color: var(--color-bg);
   transition: transform 0.35s ease, opacity 0.25s ease;
   transform-origin: center;
 }
