@@ -15,6 +15,7 @@ function Navbar() {
   }, [isOpen])
 
   const toggleMenu = () => setIsOpen((prev) => !prev)
+  const closeMenu = () => setIsOpen(false)
 
   const linkClass = ({ isActive }) =>
     isActive ? 'navbar__link active' : 'navbar__link'
@@ -22,7 +23,7 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar__container">
-        <NavLink to="/" className="navbar__logo">
+        <NavLink to="/" className="navbar__logo" onClick={closeMenu}>
           MaJaM
         </NavLink>
 
@@ -62,21 +63,21 @@ function Navbar() {
       {/* OVERLAY */}
       <div
         className={`navbar__overlay ${isOpen ? 'is-open' : ''}`}
-        onClick={toggleMenu}
+        onClick={closeMenu}
       />
 
       {/* NAV MÓVIL */}
       <nav className={`navbar__mobile ${isOpen ? 'is-open' : ''}`}>
-        <NavLink to="/" className={linkClass} end>
+        <NavLink to="/" className={linkClass} end onClick={closeMenu}>
           Inicio
         </NavLink>
-        <NavLink to="/about" className={linkClass}>
+        <NavLink to="/about" className={linkClass} onClick={closeMenu}>
           Somos MaJaM
         </NavLink>
-        <NavLink to="/projects" className={linkClass}>
+        <NavLink to="/projects" className={linkClass} onClick={closeMenu}>
           Proyectos
         </NavLink>
-        <NavLink to="/contact" className={linkClass}>
+        <NavLink to="/contact" className={linkClass} onClick={closeMenu}>
           Contacto
         </NavLink>
       </nav>
