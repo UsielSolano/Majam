@@ -18,7 +18,7 @@
 /* ---------- HERO EDITORIAL ---------- */
 .about-hero {
   padding: 6rem 2rem 5rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border-blue);
 }
 
 .about-hero__container {
@@ -45,7 +45,7 @@
 
 .about-hero__title em {
   font-style: italic;
-  color: var(--color-accent);
+  color: var(--color-accent-soft);
   font-weight: 300;
 }
 
@@ -57,9 +57,10 @@
   font-weight: 300;
 }
 
-/* ---------- MANIFIESTO ---------- */
+/* ---------- MANIFIESTO (crema con acentos) ---------- */
 .manifesto {
   padding: 6rem 2rem;
+  transition: var(--transition-theme);
 }
 
 .manifesto__container {
@@ -79,7 +80,7 @@
   gap: 1.5rem;
   align-items: baseline;
   padding-bottom: 3rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border-blue);
   color: var(--color-text);
 }
 
@@ -96,11 +97,15 @@
   padding-top: 0.5rem;
 }
 
-/* ---------- FILOSOFÍA ---------- */
+/* ---------- FILOSOFÍA (fondo azul sutil) ---------- */
 .philosophy {
   padding: 6rem 2rem;
-  background-color: var(--color-bg-alt);
+  background-color: rgba(107, 163, 199, 0.08);
   transition: var(--transition-theme);
+}
+
+[data-theme='dark'] .philosophy {
+  background-color: rgba(74, 109, 140, 0.12);
 }
 
 .philosophy__container {
@@ -134,11 +139,12 @@
   margin-bottom: 0;
 }
 
-/* ---------- PILARES ---------- */
+/* ---------- PILARES (crema con acentos vino) ---------- */
 .pillars {
   padding: 6rem 2rem;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border-blue);
+  border-bottom: 1px solid var(--color-border-blue);
+  transition: var(--transition-theme);
 }
 
 .pillars__container {
@@ -157,12 +163,12 @@
   flex-direction: column;
   gap: 1rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border-blue);
 }
 
 .pillar__num {
   font-size: 0.75rem;
-  color: var(--color-accent);
+  color: var(--color-blue);
   letter-spacing: 0.2em;
 }
 
@@ -171,7 +177,7 @@
   font-weight: 300;
   letter-spacing: -0.02em;
   line-height: 1;
-  color: var(--color-text);
+  color: var(--color-accent);
 }
 
 .pillar__desc {
@@ -180,7 +186,7 @@
   color: var(--color-muted);
 }
 
-/* ---------- PROCESO ---------- */
+/* ---------- PROCESO (crema con acentos azules) ---------- */
 .process {
   padding: 6rem 2rem;
 }
@@ -201,7 +207,7 @@
   flex-direction: column;
   gap: 1rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border-blue);
 }
 
 .process-step__num {
@@ -223,11 +229,15 @@
   color: var(--color-muted);
 }
 
-/* ---------- VALORES ---------- */
+/* ---------- VALORES (fondo verde bosque sutil) ---------- */
 .values {
   padding: 6rem 2rem;
-  background-color: var(--color-bg-alt);
+  background-color: rgba(53, 73, 35, 0.06);
   transition: var(--transition-theme);
+}
+
+[data-theme='dark'] .values {
+  background-color: rgba(90, 74, 0, 0.15);
 }
 
 .values__container {
@@ -265,13 +275,18 @@
   color: var(--color-muted);
 }
 
-/* ---------- CTA ---------- */
+/* ---------- CTA (vino profundo / azafrán) ---------- */
+/* ---------- CTA (mismo fondo que filosofía) ---------- */
 .about-cta {
   padding: 8rem 2rem;
-  background-color: #e6d7c4;      /* ☀️ light: beige claro */
+  background-color: rgba(107, 163, 199, 0.08);
   color: var(--color-text);
   text-align: center;
   transition: var(--transition-theme);
+}
+
+[data-theme='dark'] .about-cta {
+  background-color: rgba(74, 109, 140, 0.12);
 }
 
 .about-cta__container {
@@ -301,28 +316,8 @@
 
 .about-cta__button:hover {
   background-color: var(--color-text);
-  color: #e6d7c4;
+  color: var(--color-bg);
 }
-
-/* Dark mode: fondo vino translúcido */
-[data-theme='dark'] .about-cta {
-  background-color: #4e3216e3;
-}
-
-[data-theme='dark'] .about-cta__title {
-  color: #e6d7c4;
-}
-
-[data-theme='dark'] .about-cta__button {
-  border: 1px solid #e6d7c4;
-  color: #e6d7c4;
-}
-
-[data-theme='dark'] .about-cta__button:hover {
-  background-color: #e6d7c4;
-  color: #4e3216;
-}
-
 /* ---------- RESPONSIVE ABOUT ---------- */
 @media (max-width: 1024px) {
   .about-hero {

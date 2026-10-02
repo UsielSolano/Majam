@@ -57,7 +57,7 @@
 .hero__cta {
   display: inline-block;
   padding: 1rem 2.5rem;
-  border: 1px solid var(--color-text);
+  border: 1px solid var(--color-blue);
   color: var(--color-text);
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -66,14 +66,20 @@
 }
 
 .hero__cta:hover {
-  background-color: var(--color-text);
+  background-color: var(--color-blue);
   color: var(--color-bg);
 }
 
-/* ---------- INTRO ---------- */
+/* ---------- INTRO (fondo azul sutil) ---------- */
 .intro {
   padding: 6rem 2rem;
-  border-top: 1px solid var(--color-border);
+  background-color: rgba(107, 163, 199, 0.08);
+  border-top: 1px solid var(--color-border-blue);
+  transition: var(--transition-theme);
+}
+
+[data-theme='dark'] .intro {
+  background-color: rgba(74, 109, 140, 0.12);
 }
 
 .intro__container {
@@ -88,10 +94,15 @@
   color: var(--color-text);
 }
 
-/* ---------- SERVICIOS ---------- */
+/* ---------- SERVICIOS (fondo verde bosque sutil) ---------- */
 .services {
   padding: 6rem 2rem;
-  background-color: var(--color-bg-alt);
+  background-color: rgba(53, 73, 35, 0.06);
+  transition: var(--transition-theme);
+}
+
+[data-theme='dark'] .services {
+  background-color: rgba(90, 74, 0, 0.15);
 }
 
 .services__container {
@@ -121,7 +132,7 @@
   font-size: 1.15rem;
   font-weight: 500;
   letter-spacing: -0.01em;
-  color: var(--color-text);
+  color: var(--color-accent-alt);
 }
 
 .service__desc {
@@ -154,7 +165,7 @@
 }
 
 .projects-preview__link:hover {
-  color: var(--color-text);
+  color: var(--color-blue);
 }
 
 .projects-preview__grid {
@@ -200,8 +211,8 @@
 /* ---------- CTA FINAL ---------- */
 .cta {
   padding: 8rem 2rem;
-  background-color: var(--color-text);
-  color: var(--color-bg);
+  background-color: #e4d7c4;
+  color: var(--color-text);
   text-align: center;
   transition: var(--transition-theme);
 }
@@ -217,20 +228,21 @@
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
   line-height: 1.1;
+  color: var(--color-text);
 }
 
 .cta__text {
   font-size: 1.1rem;
-  color: var(--color-bg);
-  opacity: 0.7;
+  color: var(--color-text);
+  opacity: 0.75;
   margin-bottom: 3rem;
 }
 
 .cta__button {
   display: inline-block;
   padding: 1rem 2.5rem;
-  border: 1px solid var(--color-bg);
-  color: var(--color-bg);
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -238,8 +250,31 @@
 }
 
 .cta__button:hover {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--color-text);
+  color: #e4d7c4;
+}
+
+/* Dark mode: fondo vino translúcido */
+[data-theme='dark'] .cta {
+  background-color: #4e3216e3;
+}
+
+[data-theme='dark'] .cta__title {
+  color: #e4d7c4;
+}
+
+[data-theme='dark'] .cta__text {
+  color: #e4d7c4;
+}
+
+[data-theme='dark'] .cta__button {
+  border: 1px solid #e4d7c4;
+  color: #e4d7c4;
+}
+
+[data-theme='dark'] .cta__button:hover {
+  background-color: #e4d7c4;
+  color: #4e3216;
 }
 
 /* ---------- RESPONSIVE HOME ---------- */

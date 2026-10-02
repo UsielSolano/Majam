@@ -1,8 +1,8 @@
 .theme-toggle {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border-blue);
   background-color: transparent;
   cursor: pointer;
   display: flex;
@@ -14,12 +14,13 @@
 }
 
 .theme-toggle:hover {
+  border-color: var(--color-blue);
   background-color: var(--color-bg-alt);
   transform: rotate(15deg);
 }
 
 .theme-toggle__icon {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--color-text);
   transition: transform 0.4s ease;
   line-height: 1;
@@ -29,25 +30,10 @@
   transform: rotate(360deg);
 }
 
-/* Variante pequeña para el footer */
-.theme-toggle--small {
-  width: 32px;
-  height: 32px;
-  border-color: var(--color-border);
-}
-
-.theme-toggle--small .theme-toggle__icon {
-  font-size: 0.85rem;
-}
-
-.theme-toggle--small:hover {
-  transform: rotate(20deg);
-}
-
 @media (max-width: 480px) {
   .theme-toggle {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
 
   .theme-toggle__icon {

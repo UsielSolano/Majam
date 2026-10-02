@@ -11,7 +11,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 100;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border-blue);
   transition: var(--transition-theme);
 }
 
@@ -65,11 +65,11 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--color-accent);
+  background-color: var(--color-blue);
 }
 
 /* =========================
-   ACCIONES (toggle tema + hamburguesa)
+   ACCIONES
    ========================= */
 .navbar__actions {
   display: flex;
@@ -101,7 +101,7 @@
   display: block;
   width: 26px;
   height: 1.5px;
-  background-color: var(--color-accent-soft);
+  background-color: var(--color-text);
   transition: transform 0.35s ease, opacity 0.25s ease;
   transform-origin: center;
 }
@@ -125,7 +125,7 @@
   display: none;
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(26, 18, 16, 0.5);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s ease;
@@ -152,9 +152,10 @@
   flex-direction: column;
   gap: 2rem;
   transform: translateX(100%);
-  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1),
+    background-color 0.4s ease;
   z-index: 101;
-  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
+  box-shadow: -8px 0 30px rgba(26, 18, 16, 0.15);
 }
 
 .navbar__mobile.is-open {
@@ -165,10 +166,11 @@
   font-size: 1.1rem;
   letter-spacing: 0.08em;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border-blue);
   opacity: 0;
   transform: translateX(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease, padding-left 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, padding-left 0.3s ease,
+    border-color 0.4s ease;
 }
 
 .navbar__mobile.is-open .navbar__link {
@@ -188,7 +190,7 @@
 .navbar__mobile .navbar__link.active {
   color: var(--color-accent);
   padding-left: 0.75rem;
-  border-left: 2px solid var(--color-accent);
+  border-left: 2px solid var(--color-blue);
 }
 
 /* =========================

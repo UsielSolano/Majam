@@ -1,6 +1,6 @@
 .footer {
   padding: 2rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border-blue);
   background-color: var(--color-bg);
   transition: var(--transition-theme);
 }

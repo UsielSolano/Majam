@@ -6,7 +6,6 @@ import './Navbar.css'
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
-  // Bloquea el scroll del body cuando el menú está abierto
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
     return () => {
@@ -27,7 +26,6 @@ function Navbar() {
           MaJaM
         </NavLink>
 
-        {/* NAV DESKTOP */}
         <nav className="navbar__nav navbar__nav--desktop">
           <NavLink to="/" className={linkClass} end>
             Inicio
@@ -43,7 +41,6 @@ function Navbar() {
           </NavLink>
         </nav>
 
-        {/* ACCIONES: toggle de tema + hamburguesa */}
         <div className="navbar__actions">
           <ThemeToggle />
 
@@ -60,13 +57,11 @@ function Navbar() {
         </div>
       </div>
 
-      {/* OVERLAY */}
       <div
         className={`navbar__overlay ${isOpen ? 'is-open' : ''}`}
         onClick={closeMenu}
       />
 
-      {/* NAV MÓVIL */}
       <nav className={`navbar__mobile ${isOpen ? 'is-open' : ''}`}>
         <NavLink to="/" className={linkClass} end onClick={closeMenu}>
           Inicio
