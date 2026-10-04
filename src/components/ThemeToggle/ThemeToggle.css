@@ -2,7 +2,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid var(--color-border-blue);
+  border: 1px solid #621529bc;
   background-color: transparent;
   cursor: pointer;
   display: flex;
@@ -14,7 +14,7 @@
 }
 
 .theme-toggle:hover {
-  border-color: var(--color-blue);
+  border-color: #621529bc;
   background-color: var(--color-bg-alt);
   transform: rotate(15deg);
 }
@@ -28,6 +28,19 @@
 
 .theme-toggle__icon.is-dark {
   transform: rotate(360deg);
+}
+
+/* Dark mode: borde e ícono en ocre */
+[data-theme='dark'] .theme-toggle {
+  border-color: #a77739;
+}
+
+[data-theme='dark'] .theme-toggle:hover {
+  border-color: #a77739;
+}
+
+[data-theme='dark'] .theme-toggle__icon {
+  color: #a77739;
 }
 
 @media (max-width: 480px) {

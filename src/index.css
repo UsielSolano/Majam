@@ -3,38 +3,36 @@
    ========================= */
 :root {
   /* ---------- Fondos ---------- */
-  --color-bg: #f3ebdd;
-  --color-bg-alt: rgba(98, 21, 41, 0.04);
-  --color-bg-elevated: #e4d7c4;
+  --color-bg: #e4d5c2;
+  --color-bg-alt: rgba(167, 119, 57, 0.06);
+  --color-bg-elevated: #d4c0a5;
 
   /* ---------- Texto ---------- */
-  --color-text: #2a1a1f;
-  --color-text-inverse: #e4d7c4;
-  --color-muted: #5a4a45;
+  --color-text: #5e162e;
+  --color-text-inverse: #e4d5c2;
+  --color-muted: #7a5a4a;
 
-  /* ---------- Acentos principales ---------- */
-  --color-accent: #621529;
-  --color-accent-alt: #354923;
-  --color-accent-soft: #9c4e38;
-  --color-accent-bright: #dba000;
+  /* ---------- Acentos ---------- */
+  --color-accent: #5e162e;         /* vino profundo */
+  --color-accent-alt: #504901;     /* oliva oscuro */
+  --color-accent-soft: #a77739;    /* ocre */
+  --color-accent-bright: #a77739;  /* ocre */
+  --color-accent-warm: #a77739;
+  --color-accent-olive: #504901;
 
-  /* ---------- Azul ---------- */
-  --color-blue: #6ba3c7;
-  --color-blue-soft: rgba(107, 163, 199, 0.25);
-  --color-blue-strong: #4a7fa5;
-
-  /* ---------- Contornos ---------- */
-  --color-outline: #dba000;
-  --color-outline-soft: rgba(219, 160, 0, 0.35);
+  /* ---------- Azul (se mantiene para detalles) ---------- */
+  --color-blue: #00aeef;
+  --color-blue-soft: rgba(0, 174, 239, 0.15);
+  --color-blue-strong: #0089bd;
 
   /* ---------- Bordes ---------- */
-  --color-border: rgba(42, 26, 31, 0.12);
-  --color-border-strong: rgba(42, 26, 31, 0.25);
-  --color-border-blue: rgba(107, 163, 199, 0.4);
+  --color-border: rgba(94, 22, 46, 0.12);
+  --color-border-strong: rgba(94, 22, 46, 0.25);
+  --color-border-blue: rgba(0, 174, 239, 0.35);
 
   /* ---------- Placeholders ---------- */
-  --color-placeholder-1: #9c4e38;
-  --color-placeholder-2: #2a1a1f;
+  --color-placeholder-1: #5e162e;
+  --color-placeholder-2: #a77739;
 
   /* ---------- Tipografía ---------- */
   --font-primary: "Josefin Sans", "Helvetica Neue", Arial, sans-serif;
@@ -45,35 +43,40 @@
 }
 
 /* =========================
-   TEMA OSCURO — NOCHE DE OTOÑO
+   TEMA OSCURO — VINO PROFUNDO
    ========================= */
 [data-theme='dark'] {
-  --color-bg: #1a1210;
-  --color-bg-alt: rgba(228, 215, 196, 0.04);
-  --color-bg-elevated: #2a1a1f;
+  /* ---------- Fondos ---------- */
+  --color-bg: #504901;              /* vino profundo */
+  --color-bg-alt: rgba(228, 213, 194, 0.05);
+  --color-bg-elevated: #4a1124;
 
-  --color-text: #e4d7c4;
-  --color-text-inverse: #1a1210;
-  --color-muted: #b8a89d;
+  /* ---------- Texto ---------- */
+  --color-text: #e4d5c2;            /* crema */
+  --color-text-inverse: #5e162e;
+  --color-muted: #c4a89a;
 
-  --color-accent: #dba000;
-  --color-accent-alt: #9c4e38;
-  --color-accent-soft: #d39b68;
-  --color-accent-bright: #dba000;
+  /* ---------- Acentos ---------- */
+  --color-accent: #a77739;          /* ocre */
+  --color-accent-alt: #e4d5c2;      /* crema */
+  --color-accent-soft: #a77739;     /* ocre */
+  --color-accent-bright: #a77739;   /* ocre */
+  --color-accent-warm: #a77739;
+  --color-accent-olive: #504901;
 
-  --color-blue: #4a6d8c;
-  --color-blue-soft: rgba(74, 109, 140, 0.35);
-  --color-blue-strong: #6b9bc0;
+  /* ---------- Azul ---------- */
+  --color-blue: #00aeef;
+  --color-blue-soft: rgba(0, 174, 239, 0.18);
+  --color-blue-strong: #4dc9f5;
 
-  --color-outline: #dba000;
-  --color-outline-soft: rgba(219, 160, 0, 0.4);
+  /* ---------- Bordes ---------- */
+  --color-border: rgba(228, 213, 194, 0.15);
+  --color-border-strong: rgba(228, 213, 194, 0.28);
+  --color-border-blue: rgba(0, 174, 239, 0.35);
 
-  --color-border: rgba(228, 215, 196, 0.12);
-  --color-border-strong: rgba(228, 215, 196, 0.25);
-  --color-border-blue: rgba(74, 109, 140, 0.45);
-
-  --color-placeholder-1: #d39b68;
-  --color-placeholder-2: #e4d7c4;
+  /* ---------- Placeholders ---------- */
+  --color-placeholder-1: #a77739;
+  --color-placeholder-2: #e4d5c2;
 }
 
 /* =========================

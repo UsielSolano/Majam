@@ -57,7 +57,7 @@
 .hero__cta {
   display: inline-block;
   padding: 1rem 2.5rem;
-  border: 1px solid var(--color-blue);
+  border: 2px solid #621529bc;
   color: var(--color-text);
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -66,7 +66,7 @@
 }
 
 .hero__cta:hover {
-  background-color: var(--color-blue);
+  background-color: #621529;
   color: var(--color-bg);
 }
 
@@ -95,7 +95,7 @@
 }
 
 /* ---------- SERVICIOS (fondo verde bosque sutil) ---------- */
-.services {
+.services  {
   padding: 6rem 2rem;
   background-color: rgba(53, 73, 35, 0.06);
   transition: var(--transition-theme);
@@ -254,27 +254,42 @@
   color: #e4d7c4;
 }
 
-/* Dark mode: fondo vino translúcido */
+/* =========================
+   DARK MODE — acentos en ocre
+   ========================= */
+
+/* Hero CTA — borde ocre */
+[data-theme='dark'] .hero__cta {
+  border: 2px solid #a77739;
+  color: #e4d5c2;
+}
+
+[data-theme='dark'] .hero__cta:hover  {
+  background-color: #a77739;
+  color: #5e162e;
+}
+
+/* CTA final — fondo marrón café cálido + texto crema */
 [data-theme='dark'] .cta {
-  background-color: #4e3216e3;
+  background-color: #504901;
 }
 
 [data-theme='dark'] .cta__title {
-  color: #e4d7c4;
+  color: #e4d5c2;
 }
 
 [data-theme='dark'] .cta__text {
-  color: #e4d7c4;
+  color: #e4d5c2;
 }
 
 [data-theme='dark'] .cta__button {
-  border: 1px solid #e4d7c4;
-  color: #e4d7c4;
+  border: 1px solid #a77739;
+  color: #a77739;
 }
 
 [data-theme='dark'] .cta__button:hover {
-  background-color: #e4d7c4;
-  color: #4e3216;
+  background-color: #a77739;
+  color: #3a2510;
 }
 
 /* ---------- RESPONSIVE HOME ---------- */

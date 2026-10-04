@@ -11,7 +11,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 100;
-  border-bottom: 1px solid var(--color-border-blue);
+  border-bottom: 1px solid #621529bc;
   transition: var(--transition-theme);
 }
 
@@ -65,7 +65,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--color-blue);
+  background-color: #621529bc;
 }
 
 /* =========================
@@ -166,7 +166,7 @@
   font-size: 1.1rem;
   letter-spacing: 0.08em;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--color-border-blue);
+  border-bottom: 1px solid #621529bc;
   opacity: 0;
   transform: translateX(20px);
   transition: opacity 0.3s ease, transform 0.3s ease, padding-left 0.3s ease,
@@ -190,7 +190,26 @@
 .navbar__mobile .navbar__link.active {
   color: var(--color-accent);
   padding-left: 0.75rem;
-  border-left: 2px solid var(--color-blue);
+  border-left: 2px solid #621529bc;
+}
+
+/* =========================
+   DARK MODE — acentos en ocre
+   ========================= */
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid #a77739;
+}
+
+[data-theme='dark'] .navbar__link.active::after {
+  background-color: #a77739;
+}
+
+[data-theme='dark'] .navbar__mobile .navbar__link {
+  border-bottom: 1px solid #a77739;
+}
+
+[data-theme='dark'] .navbar__mobile .navbar__link.active {
+  border-left: 2px solid #a77739;
 }
 
 /* =========================
