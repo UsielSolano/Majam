@@ -17,13 +17,31 @@
 
 /* ---------- HERO ---------- */
 .hero {
+  position: relative;
   min-height: 85vh;
   display: flex;
   align-items: center;
   padding: 4rem 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(58, 15, 30, 0.5) 0%,
+    rgba(58, 15, 30, 0.7) 100%
+  );
+  z-index: 1;
 }
 
 .hero__container {
+  position: relative;
+  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -33,7 +51,7 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  color: var(--color-accent);
+  color: #a77739;
   margin-bottom: 1.5rem;
 }
 
@@ -43,12 +61,12 @@
   letter-spacing: -0.02em;
   line-height: 0.95;
   margin-bottom: 2rem;
-  color: var(--color-text);
+  color: #ffffff;
 }
 
 .hero__subtitle {
   font-size: 1.25rem;
-  color: var(--color-muted);
+  color: rgba(255, 255, 255, 0.85);
   max-width: 500px;
   margin-bottom: 3rem;
   font-weight: 300;
@@ -57,8 +75,8 @@
 .hero__cta {
   display: inline-block;
   padding: 1rem 2.5rem;
-  border: 2px solid #621529bc;
-  color: var(--color-text);
+  border: 2px solid #ffffff;
+  color: #ffffff;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -66,11 +84,20 @@
 }
 
 .hero__cta:hover {
-  background-color: #621529;
-  color: var(--color-bg);
+  background-color: #ffffff;
+  color: #5e162e;
 }
 
-/* ---------- INTRO (fondo azul sutil) ---------- */
+/* Dark mode overlay más oscuro */
+[data-theme='dark'] .hero__overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 8, 15, 0.65) 0%,
+    rgba(20, 8, 15, 0.8) 100%
+  );
+}
+
+/* ---------- INTRO ---------- */
 .intro {
   padding: 6rem 2rem;
   background-color: rgba(107, 163, 199, 0.08);
@@ -94,15 +121,15 @@
   color: var(--color-text);
 }
 
-/* ---------- SERVICIOS (fondo verde bosque sutil) ---------- */
-.services  {
+/* ---------- SERVICIOS ---------- */
+.services {
   padding: 6rem 2rem;
   background-color: rgba(53, 73, 35, 0.06);
   transition: var(--transition-theme);
 }
 
 [data-theme='dark'] .services {
-  background-color: rgba(90, 74, 0, 0.15);
+  background-color: #5a4a0026;
 }
 
 .services__container {
@@ -255,41 +282,74 @@
 }
 
 /* =========================
-   DARK MODE — acentos en ocre
+   DARK MODE
    ========================= */
 
-/* Hero CTA — borde ocre */
-[data-theme='dark'] .hero__cta {
-  border: 2px solid #a77739;
-  color: #e4d5c2;
-}
-
-[data-theme='dark'] .hero__cta:hover  {
-  background-color: #a77739;
-  color: #5e162e;
-}
-
-/* CTA final — fondo marrón café cálido + texto crema */
 [data-theme='dark'] .cta {
-  background-color: #504901;
+  background-color: #5e162e3e;
 }
 
 [data-theme='dark'] .cta__title {
-  color: #e4d5c2;
+  color: #5e162e;
 }
 
 [data-theme='dark'] .cta__text {
-  color: #e4d5c2;
+  color: #5e162e;
 }
 
 [data-theme='dark'] .cta__button {
-  border: 1px solid #a77739;
-  color: #a77739;
+  border: 1px solid #5e162e;
+  color: #5e162e;
 }
 
 [data-theme='dark'] .cta__button:hover {
-  background-color: #a77739;
-  color: #3a2510;
+  background-color: #5e162e84;
+  color: #e9e9e9;
+}
+
+/* Texto en blanco en dark mode */
+[data-theme='dark'] .hero__title {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .hero__subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='dark'] .hero__eyebrow {
+  color: #a77739;
+}
+
+[data-theme='dark'] .intro__text {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .section-title {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme='dark'] .service__number {
+  color: #a77739;
+}
+
+[data-theme='dark'] .service__title {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .service__desc {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='dark'] .projects-preview__link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='dark'] .project-card__name {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .project-card__meta {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* ---------- RESPONSIVE HOME ---------- */
@@ -316,7 +376,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 65vh;
+    min-height: 70vh;
     padding: 2.5rem 1.25rem;
   }
 

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import home1 from '../../assets/images/home_1.png'
 import './Home.css'
 
 function Home() {
@@ -6,12 +7,14 @@ function Home() {
     <div className="home">
 
       {/* HERO */}
-      <section className="hero">
+      <section
+        className="hero"
+        style={{ backgroundImage: `url(${home1})` }}
+      >
+        <div className="hero__overlay" />
         <div className="hero__container">
           <p className="hero__eyebrow">Estudio de arquitectura</p>
-          <h1 className="hero__title">
-            MaJaM
-          </h1>
+          <h1 className="hero__title">MaJaM</h1>
           <p className="hero__subtitle">
             Diseñamos espacios que cuentan historias.
           </p>

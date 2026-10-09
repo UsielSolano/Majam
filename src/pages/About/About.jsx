@@ -24,15 +24,15 @@ function About() {
       <section className="manifesto">
         <div className="manifesto__container">
           <p className="manifesto__line">
-            <span className="manifesto__num">01</span>
+           
             Cada espacio tiene una historia que merece ser contada.
           </p>
           <p className="manifesto__line">
-            <span className="manifesto__num">02</span>
+           
             Diseñamos para las personas, no para las revistas.
           </p>
           <p className="manifesto__line">
-            <span className="manifesto__num">03</span>
+           
             La belleza nace cuando la función y la emoción se encuentran.
           </p>
         </div>
@@ -70,7 +70,7 @@ function About() {
           <h2 className="about-section-title">Los pilares de MaJaM</h2>
           <div className="pillars__grid">
             <div className="pillar">
-              <span className="pillar__num">01</span>
+              
               <h3 className="pillar__title">Elegancia</h3>
               <p className="pillar__desc">
                 No buscamos lo llamativo, sino lo atemporal. La elegancia,
@@ -78,7 +78,7 @@ function About() {
               </p>
             </div>
             <div className="pillar">
-              <span className="pillar__num">02</span>
+              
               <h3 className="pillar__title">Talento</h3>
               <p className="pillar__desc">
                 Dos miradas que se complementan: una en el detalle, otra
@@ -86,7 +86,7 @@ function About() {
               </p>
             </div>
             <div className="pillar">
-              <span className="pillar__num">03</span>
+              
               <h3 className="pillar__title">Disciplina</h3>
               <p className="pillar__desc">
                 Cumplimos lo que prometemos: tiempos, presupuestos y
@@ -94,7 +94,7 @@ function About() {
               </p>
             </div>
             <div className="pillar">
-              <span className="pillar__num">04</span>
+              
               <h3 className="pillar__title">Calidad</h3>
               <p className="pillar__desc">
                 Cuidamos cada decisión, del concepto a la última junta.
@@ -102,7 +102,7 @@ function About() {
               </p>
             </div>
             <div className="pillar">
-              <span className="pillar__num">05</span>
+              
               <h3 className="pillar__title">Sustentabilidad</h3>
               <p className="pillar__desc">
                 Diseñamos pensando en el mañana: materiales locales, bajo
@@ -120,7 +120,7 @@ function About() {
           <h2 className="about-section-title">Cómo trabajamos</h2>
           <div className="process__grid">
             <div className="process-step">
-              <span className="process-step__num">01</span>
+             
               <h4>Escuchar</h4>
               <p>
                 Antes de dibujar una línea, entendemos a quién vamos a
@@ -128,7 +128,7 @@ function About() {
               </p>
             </div>
             <div className="process-step">
-              <span className="process-step__num">02</span>
+              
               <h4>Conceptualizar</h4>
               <p>
                 Traducimos todo eso en una idea clara. Un concepto que
@@ -136,7 +136,7 @@ function About() {
               </p>
             </div>
             <div className="process-step">
-              <span className="process-step__num">03</span>
+              
               <h4>Detallar</h4>
               <p>
                 La belleza vive en los detalles. Documentamos cada
@@ -144,7 +144,7 @@ function About() {
               </p>
             </div>
             <div className="process-step">
-              <span className="process-step__num">04</span>
+             
               <h4>Acompañar</h4>
               <p>
                 No desaparecemos al entregar los planos. Estamos en obra,

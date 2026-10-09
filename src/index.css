@@ -2,81 +2,81 @@
    TEMA CLARO — OTOÑO
    ========================= */
 :root {
-  /* ---------- Fondos ---------- */
   --color-bg: #e4d5c2;
   --color-bg-alt: rgba(167, 119, 57, 0.06);
   --color-bg-elevated: #d4c0a5;
 
-  /* ---------- Texto ---------- */
   --color-text: #5e162e;
   --color-text-inverse: #e4d5c2;
   --color-muted: #7a5a4a;
 
-  /* ---------- Acentos ---------- */
-  --color-accent: #5e162e;         /* vino profundo */
-  --color-accent-alt: #504901;     /* oliva oscuro */
-  --color-accent-soft: #a77739;    /* ocre */
-  --color-accent-bright: #a77739;  /* ocre */
+  --color-accent: #5e162e;
+  --color-accent-alt: #504901;
+  --color-accent-soft: #a77739;
+  --color-accent-bright: #a77739;
   --color-accent-warm: #a77739;
   --color-accent-olive: #504901;
 
-  /* ---------- Azul (se mantiene para detalles) ---------- */
   --color-blue: #00aeef;
   --color-blue-soft: rgba(0, 174, 239, 0.15);
   --color-blue-strong: #0089bd;
 
-  /* ---------- Bordes ---------- */
   --color-border: rgba(94, 22, 46, 0.12);
   --color-border-strong: rgba(94, 22, 46, 0.25);
   --color-border-blue: rgba(0, 174, 239, 0.35);
 
-  /* ---------- Placeholders ---------- */
   --color-placeholder-1: #5e162e;
   --color-placeholder-2: #a77739;
 
-  /* ---------- Tipografía ---------- */
   --font-primary: "Josefin Sans", "Helvetica Neue", Arial, sans-serif;
 
-  /* ---------- Transiciones ---------- */
   --transition-theme: background-color 0.4s ease, color 0.4s ease,
     border-color 0.4s ease;
 }
 
 /* =========================
-   TEMA OSCURO — VINO PROFUNDO
+   TEMA OSCURO — DEGRADADO VINO → CASI BLANCO
    ========================= */
 [data-theme='dark'] {
-  /* ---------- Fondos ---------- */
-  --color-bg: #504901;              /* vino profundo */
-  --color-bg-alt: rgba(228, 213, 194, 0.05);
-  --color-bg-elevated: #4a1124;
+  --color-bg: #e4d5c2;              /* fondo base (por si el degradado no carga) */
+  --color-bg-alt: rgba(94, 22, 46, 0.15);
+  --color-bg-elevated: rgba(94, 22, 46, 0.25);
 
-  /* ---------- Texto ---------- */
-  --color-text: #e4d5c2;            /* crema */
-  --color-text-inverse: #5e162e;
-  --color-muted: #c4a89a;
+  /* Texto oscuro para que contraste con el degradado claro de abajo */
+  --color-text: #3a0f1e;
+  --color-text-inverse: #e4d5c2;
+  --color-muted: #6b3a48;
 
-  /* ---------- Acentos ---------- */
-  --color-accent: #a77739;          /* ocre */
-  --color-accent-alt: #e4d5c2;      /* crema */
-  --color-accent-soft: #a77739;     /* ocre */
-  --color-accent-bright: #a77739;   /* ocre */
+  --color-accent: #5e162e;
+  --color-accent-alt: #504901;
+  --color-accent-soft: #a77739;
+  --color-accent-bright: #a77739;
   --color-accent-warm: #a77739;
   --color-accent-olive: #504901;
 
-  /* ---------- Azul ---------- */
   --color-blue: #00aeef;
-  --color-blue-soft: rgba(0, 174, 239, 0.18);
-  --color-blue-strong: #4dc9f5;
+  --color-blue-soft: rgba(0, 174, 239, 0.2);
+  --color-blue-strong: #0089bd;
 
-  /* ---------- Bordes ---------- */
-  --color-border: rgba(228, 213, 194, 0.15);
-  --color-border-strong: rgba(228, 213, 194, 0.28);
-  --color-border-blue: rgba(0, 174, 239, 0.35);
+  --color-border: rgba(58, 15, 30, 0.15);
+  --color-border-strong: rgba(58, 15, 30, 0.3);
+  --color-border-blue: rgba(0, 174, 239, 0.4);
 
-  /* ---------- Placeholders ---------- */
-  --color-placeholder-1: #a77739;
-  --color-placeholder-2: #e4d5c2;
+  --color-placeholder-1: #5e162e;
+  --color-placeholder-2: #a77739;
+
+  /* ---------- Degradado continuo vino → casi blanco ---------- */
+  --gradient-page: linear-gradient(
+    180deg,
+    #3a0f1e 0%,       /* vino casi negro arriba */
+    #5e162e 12%,      /* vino profundo */
+    #7a2438 28%,      /* vino medio */
+    #9c4a58 45%,      /* vino claro */
+    #b8808a 62%,      /* rosa vino */
+    #d4b8b0 78%,      /* beige rosado */
+    #e4d5c2 92%,      /* crema cálido */
+    #f0e8dc 100%      /* casi blanco (no blanco puro) */
+  );
 }
 
 /* =========================
@@ -88,13 +88,33 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
+  min-height: 100%;
   background-color: var(--color-bg);
+  transition: background-color 0.4s ease;
+}
+
+body {
+  min-height: 100vh;
   color: var(--color-text);
   font-family: var(--font-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  transition: var(--transition-theme);
+  transition: color 0.4s ease;
+  background-color: transparent;
+}
+
+/* Aplicamos el degradado al body solo en dark mode */
+[data-theme='dark'] body {
+  background-image: var(--gradient-page);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: transparent;
 }
 
 a {
@@ -105,15 +125,7 @@ a {
 main {
   min-height: calc(100vh - 140px);
   padding-top: 80px;
-}
-
-body,
-.navbar,
-.footer,
-main,
-section {
-  transition: background-color 0.4s ease, color 0.4s ease,
-    border-color 0.4s ease;
+  background-color: transparent;
 }
 
 /* =========================

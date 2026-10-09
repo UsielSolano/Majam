@@ -58,7 +58,8 @@
   color: var(--color-text);
 }
 
-.navbar__link.active::after {
+/* Subrayado con animación de izquierda a derecha */
+.navbar__link::after {
   content: '';
   position: absolute;
   bottom: -6px;
@@ -66,6 +67,17 @@
   width: 100%;
   height: 1px;
   background-color: #621529bc;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.navbar__link:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar__link.active::after {
+  transform: scaleX(1);
 }
 
 /* =========================
@@ -183,7 +195,8 @@
 .navbar__mobile.is-open .navbar__link:nth-child(3) { transition-delay: 0.26s; }
 .navbar__mobile.is-open .navbar__link:nth-child(4) { transition-delay: 0.34s; }
 
-.navbar__mobile .navbar__link.active::after {
+/* En móvil, ocultamos el pseudo-elemento del subrayado animado */
+.navbar__mobile .navbar__link::after {
   display: none;
 }
 
@@ -194,14 +207,36 @@
 }
 
 /* =========================
-   DARK MODE — acentos en ocre
+   DARK MODE
    ========================= */
 [data-theme='dark'] .navbar {
+  background-color: #3a0f1ed9;
   border-bottom: 1px solid #a77739;
 }
 
-[data-theme='dark'] .navbar__link.active::after {
+[data-theme='dark'] .navbar__logo {
+  color: #e4d5c2;
+}
+
+[data-theme='dark'] .navbar__link {
+  color: rgba(228, 213, 194, 0.65);
+}
+
+[data-theme='dark'] .navbar__link:hover,
+[data-theme='dark'] .navbar__link.active {
+  color: #e4d5c2;
+}
+
+[data-theme='dark'] .navbar__link::after {
   background-color: #a77739;
+}
+
+[data-theme='dark'] .navbar__toggle span {
+  background-color: #e4d5c2;
+}
+
+[data-theme='dark'] .navbar__mobile {
+  background-color: #3a0f1e;
 }
 
 [data-theme='dark'] .navbar__mobile .navbar__link {
@@ -269,4 +304,4 @@
   .navbar__mobile .navbar__link {
     font-size: 1rem;
   }
-}
+} 
